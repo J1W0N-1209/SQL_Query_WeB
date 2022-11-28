@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQL Query</title>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <h1>SQL Query</h1>
+    <form method="post" action="/query/">
+      <div>
+        <input
+          type="text"
+          name="query"
+          class="query"
+          placeholder="Input Query"
+        />
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <hr />
+    {% for row in rows%}
+    <div>{{ row }}</div>
+    {% endfor %}
+    <div style="color: red">{{ error }}</div>
+  </body>
+</html>
